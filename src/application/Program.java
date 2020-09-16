@@ -10,8 +10,6 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
-
-		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		System.out.println("=== Test1: seller findById  === ");
@@ -29,6 +27,10 @@ public class Program {
 				System.out.println(obj);
 			}
 		
+			System.out.println("\n=== Test3: seller findByDepartment  === ");			
+			list = sellerDao.findAll();
+				for(Seller obj : list) {
+					System.out.println(obj);
+				}
 	}
-
 }
